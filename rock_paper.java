@@ -1,6 +1,5 @@
 import javax.swing.JOptionPane;
 import java.util.Random;
-import java.util.Objects;
 
 public class rock_paper {
     public static void main(String[] args) {
@@ -13,18 +12,20 @@ public class rock_paper {
 
         String val;
 
-        if (Objects.equals(num,1)){
+        if (num == 1){
             val = "Rock";
-        } else if (Objects.equals(num, 2)) {
+        } else if (num == 2) {
             val = "Paper";
         } else {
             val = "Scissors";
         }
 
-        if (Objects.equals(num,guess)){
-            JOptionPane.showMessageDialog(null,"Your guess was right!");
+        if ((guess == 1 && num == 3) || (guess == 2 && num == 1) || (guess == 3 && num == 2)){
+            JOptionPane.showMessageDialog(null,"You won! The computer chose "+val);
+        } else if ((guess == 1 && num == 2) || (guess == 2 && num == 3) || (guess == 3 && num == 1)) {
+            JOptionPane.showMessageDialog(null,"You lose. Computer chose "+val);
         } else {
-            JOptionPane.showMessageDialog(null,"The computer chose "+val);
+            JOptionPane.showMessageDialog(null,"Draw");
         }
 
     }
