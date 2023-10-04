@@ -7,7 +7,6 @@ public class rock_paper {
         Random random = new Random();
 
         int num = random.nextInt(1,3);
-        System.out.print(num);
         int guess = Integer.parseInt(JOptionPane.showInputDialog("Enter your guess(1:Rock||2:Paper||3:Scissors)"));
 
         String val;
@@ -27,6 +26,5 @@ public class rock_paper {
         } else {
             JOptionPane.showMessageDialog(null,"Draw");
         }
-
     }
 }
