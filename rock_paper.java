@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Random random = new Random();
         while (true){
-            int num = random.nextInt(1,3);
+            int num = random.nextInt(1,4);
             System.out.print(num);
             int guess = Integer.parseInt(JOptionPane.showInputDialog("Enter your guess(1:Rock||2:Paper||3:Scissors||-1:Quit)"));
 
